@@ -454,6 +454,14 @@ html{scroll-behavior:auto}
 .bar i{transition:none}
 }
 @media print{.nav,.progress{display:none}body{background:#fff;color:#000}}
+
+.chan-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.chan{display:flex;align-items:center;gap:16px;padding:20px;border-radius:20px;border:1px solid var(--line);background:var(--card-bg);box-shadow:var(--card-sh);text-decoration:none;color:var(--tx);transition:transform .3s var(--ease),border-color .3s}
+.chan:hover{transform:translateY(-4px);border-color:var(--a1)}
+.chan img{width:72px;height:72px;border-radius:50%;object-fit:cover;flex:none;border:1px solid var(--line2)}
+.chan b{display:block;font:700 17px/1.25 var(--fd)}
+.chan span{display:block;margin-top:4px;font-size:14px;color:var(--mut);line-height:1.4}
+@media (max-width:900px){.chan-row{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -538,6 +546,26 @@ html{scroll-behavior:auto}
     <article class="card rv spot" style="--d:.16s"><span class="num" aria-hidden="true">3</span><h3 class="h3">Look me up</h3><p>Find me on LinkedIn, YouTube and Instagram, and email me with any question.</p><a class="lnk" href="https://www.linkedin.com/in/adityaksocial" target="_blank" rel="noopener">Open LinkedIn</a></article>
   </div>
   <p class="src rv">Revenue figures are YouTube's estimated values, not verified payouts. Single-day readings are labelled as such. Last reviewed 15 November 2026.</p>
+</div></section>
+
+<section class="sec" id="channels" aria-labelledby="ch-title"><div class="wrap">
+  <div class="sec-head rv"><p class="eyebrow">Channels I've grown</p>
+    <h2 class="h2" id="ch-title">Real channels, <em>you can visit them.</em></h2>
+    <p class="lead">Each channel below is public on YouTube. Follow the link to see the channel for yourself.</p></div>
+  <div class="chan-row">
+    <a class="chan rv spot" href="https://www.youtube.com/@AdityakSocial" target="_blank" rel="noopener">
+      <img src="assets/channels/aditya-k-social.webp" alt="Aditya K Social channel logo" width="72" height="72" loading="lazy">
+      <div><b>Aditya K Social</b><span>Own channel · growth and AI systems</span></div>
+    </a>
+    <a class="chan rv spot" style="--d:.06s" href="https://www.youtube.com/@FocusPlusnews" target="_blank" rel="noopener">
+      <img src="assets/channels/focus-plus.webp" alt="Focus Plus channel logo" width="72" height="72" loading="lazy">
+      <div><b>Focus Plus</b><span>112.5M views in 16 months · $0 ad spend</span></div>
+    </a>
+    <a class="chan rv spot" style="--d:.12s" href="https://www.youtube.com/@travellingsankirtanparty" target="_blank" rel="noopener">
+      <img src="assets/channels/tsp.webp" alt="Travelling Sankirtan Party channel logo" width="72" height="72" loading="lazy">
+      <div><b>Travelling Sankirtan Party</b><span>+295% views · 522K subscribers</span></div>
+    </a>
+  </div>
 </div></section>
 
 <section class="sec" id="roles" aria-labelledby="roles-title"><div class="wrap">
