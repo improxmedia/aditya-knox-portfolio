@@ -339,11 +339,16 @@ html[data-theme=dark] .out{background:radial-gradient(60% 120% at 0% 0%,rgba(53,
 .edu .card{display:flex;gap:18px;align-items:center}
 .ico{flex:none;display:grid;place-items:center;width:56px;height:56px;border-radius:16px;background:var(--glow);border:1px solid var(--line2);font:800 16px var(--fd);color:var(--a2)}
 .edu b,.cert b{display:block;font:700 17px/1.3 var(--fd)}
-.edu span,.cert span{display:block;color:var(--mut);font-size:14.5px;margin-top:3px}
+.edu div span,.cert div span{display:block;color:var(--mut);font-size:14.5px;margin-top:3px}
 .certs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:14px}
 .cert{display:flex;gap:16px;align-items:center;padding:18px;border-radius:18px;border:1px solid var(--line);background:var(--card-bg);box-shadow:var(--card-sh)}
 .cert .ico{width:48px;height:48px;border-radius:14px;font-size:14px}
 .langs{margin-top:14px}
+.lg{flex:none;display:grid;place-items:center;width:48px;height:48px;border-radius:13px;background:#fff;border:1px solid var(--line2);padding:8px}
+.lg img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.lg.wide{width:96px;padding:8px 10px}
+.lg.wide img{width:100%}
+
 
 /* faq */
 .faq{display:grid;gap:12px;max-width:900px}
@@ -864,14 +869,15 @@ html{scroll-behavior:auto}
     </div>
     <article class="card langs rv"><span class="tag">Languages</span><p style="color:var(--mut)">English (advanced; IELTS General Training in progress) · Hindi (fluent) · Odia (proficient)</p></article>
     <ul class="certs">
-      <li class="cert rv"><span class="ico" aria-hidden="true">G</span><div><b>Google Digital Marketing Certification</b><span>Google</span></div></li>
-      <li class="cert rv" style="--d:.05s"><span class="ico" aria-hidden="true">M</span><div><b>Meta Ads &amp; Instagram Certified Business Growth</b><span>Meta Blueprint</span></div></li>
-      <li class="cert rv" style="--d:.1s"><span class="ico" aria-hidden="true">MS</span><div><b>AI &amp; Machine Learning Certification</b><span>Microsoft</span></div></li>
-      <li class="cert rv"><span class="ico" aria-hidden="true">G</span><div><b>Google Cloud Facilitator Program</b><span>Google</span></div></li>
-      <li class="cert rv" style="--d:.05s"><span class="ico" aria-hidden="true">C</span><div><b>Certified Email Marketing Specialist</b><span>Coursera</span></div></li>
+      <li class="cert rv"><span class="lg"><img src="assets/logos/google-icon.svg" alt="" width="30" height="30" loading="lazy"></span><div><b>Google Digital Marketing Certification</b><span>Google</span></div></li>
+      <li class="cert rv" style="--d:.05s"><span class="lg"><img src="assets/logos/meta-icon.svg" alt="" width="30" height="30" loading="lazy"></span><div><b>Meta Ads &amp; Instagram Certified Business Growth</b><span>Meta Blueprint</span></div></li>
+      <li class="cert rv" style="--d:.1s"><span class="lg"><img src="assets/logos/microsoft-icon.svg" alt="" width="30" height="30" loading="lazy"></span><div><b>AI &amp; Machine Learning Certification</b><span>Microsoft</span></div></li>
+      <li class="cert rv"><span class="lg"><img src="assets/logos/google-cloud.svg" alt="" width="30" height="30" loading="lazy"></span><div><b>Google Cloud Facilitator Program</b><span>Google</span></div></li>
+      <li class="cert rv" style="--d:.05s"><span class="lg wide"><img src="assets/logos/coursera.svg" alt="" width="92" height="13" loading="lazy"></span><div><b>Certified Email Marketing Specialist</b><span>Coursera</span></div></li>
       <li class="cert rv" style="--d:.1s"><span class="ico" aria-hidden="true">S</span><div><b>Code in Place</b><span>Stanford University, 2021</span></div></li>
       <li class="cert rv"><span class="ico" aria-hidden="true">Mc</span><div><b>Core Skills Level (in progress)</b><span>McKinsey.org Forward</span></div></li>
     </ul>
+    <p class="src rv">Logos are trademarks of their respective owners and are shown only to identify the organization that issued each credential. No endorsement is implied.</p>
   </div>
 </div></section>
 
