@@ -470,6 +470,14 @@ html{scroll-behavior:auto}
 .brand img{display:block;max-width:100%;max-height:52px;width:auto;height:auto;object-fit:contain}
 @media (max-width:900px){.brands{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:420px){.brands{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.score{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0 0 22px}
+.sc{display:flex;flex-direction:column;gap:4px;padding:22px 20px;border-radius:20px;border:1px solid var(--line);background:var(--card-bg);box-shadow:var(--card-sh)}
+.sc .sn{font:800 clamp(34px,4.6vw,48px)/1 var(--fd);letter-spacing:-.03em;color:var(--a1)}
+.sc .sl{font:700 15px/1.3 var(--fd);color:var(--tx)}
+.sc .ss{font-size:13px;color:var(--mut);line-height:1.4}
+.chan span strong{color:var(--tx);font-weight:800}
+@media (max-width:900px){.score{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -560,30 +568,35 @@ html{scroll-behavior:auto}
   <div class="sec-head rv"><p class="eyebrow">Channels I've grown</p>
     <h2 class="h2" id="ch-title">Real channels, <em>you can visit them.</em></h2>
     <p class="lead">Each channel below is public on YouTube. Follow the link to see the channel for yourself.</p></div>
+  <div class="score" aria-label="Verified channel totals">
+    <div class="sc"><span class="sn">684.5M</span><span class="sl">Combined YouTube views</span><span class="ss">Six channels · live from YouTube</span></div>
+    <div class="sc"><span class="sn">487.1M</span><span class="sl">Views on Focus Plus</span><span class="ss">562K subscribers · 60,943 videos</span></div>
+    <div class="sc"><span class="sn">1.15M</span><span class="sl">Combined subscribers</span><span class="ss">Six channels · checked 15 Nov 2026</span></div>
+  </div>
   <div class="chan-row">
     <a class="chan rv spot" href="https://www.youtube.com/@AdityakSocial" target="_blank" rel="noopener">
       <img src="assets/channels/aditya-k-social.webp" alt="Aditya K Social channel logo" width="72" height="72" loading="lazy">
-      <div><b>Aditya K Social</b><span>Own channel · growth and AI systems</span></div>
+      <div><b>Aditya K Social</b><span><strong>1.99M views</strong> · 9.59K subscribers · own channel</span></div>
     </a>
     <a class="chan rv spot" style="--d:.06s" href="https://www.youtube.com/@FocusPlusnews" target="_blank" rel="noopener">
       <img src="assets/channels/focus-plus.webp" alt="Focus Plus channel logo" width="72" height="72" loading="lazy">
-      <div><b>Focus Plus</b><span>112.5M views in 16 months · $0 ad spend</span></div>
+      <div><b>Focus Plus</b><span><strong>487.1M views</strong> · 562K subscribers</span></div>
     </a>
     <a class="chan rv spot" style="--d:.12s" href="https://www.youtube.com/@travellingsankirtanparty" target="_blank" rel="noopener">
       <img src="assets/channels/tsp.webp" alt="Travelling Sankirtan Party channel logo" width="72" height="72" loading="lazy">
-      <div><b>Travelling Sankirtan Party</b><span>+295% views · 522K subscribers</span></div>
+      <div><b>Travelling Sankirtan Party</b><span><strong>184.2M views</strong> · 522K subscribers</span></div>
     </a>
     <a class="chan rv spot" style="--d:.18s" href="https://www.youtube.com/@almasvlogs7560" target="_blank" rel="noopener">
       <img src="assets/channels/almas-vlogs.webp" alt="Almas Vlogs channel logo" width="72" height="72" loading="lazy">
-      <div><b>Almas Vlogs</b><span>Public YouTube channel</span></div>
+      <div><b>Almas Vlogs</b><span><strong>54.6K views</strong> · 1.03K subscribers</span></div>
     </a>
     <a class="chan rv spot" style="--d:.24s" href="https://www.youtube.com/c/KHABAR2DAYINDIA/playlists" target="_blank" rel="noopener">
       <img src="assets/channels/khabar-2day.webp" alt="KHABAR 2DAY channel logo" width="72" height="72" loading="lazy">
-      <div><b>KHABAR 2DAY</b><span>Public YouTube channel</span></div>
+      <div><b>KHABAR 2DAY</b><span><strong>9.5M views</strong> · 52.5K subscribers</span></div>
     </a>
     <a class="chan rv spot" style="--d:.30s" href="https://www.youtube.com/c/geeknesis" target="_blank" rel="noopener">
       <img src="assets/channels/geeknesis.webp" alt="GeekNesis channel logo" width="72" height="72" loading="lazy">
-      <div><b>GeekNesis</b><span>Public YouTube channel</span></div>
+      <div><b>GeekNesis</b><span><strong>1.7M views</strong> · 5.99K subscribers</span></div>
     </a>
   </div>
   <div class="brands-wrap">
