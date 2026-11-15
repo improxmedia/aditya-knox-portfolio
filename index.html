@@ -500,6 +500,19 @@ html{scroll-behavior:auto}
 .js .chan-row .chan.rv.in{opacity:1;filter:none;transform:none}
 @media (prefers-reduced-motion:reduce){.js .chan-row .chan.rv,.js .chan-row .chan.rv:not(.in){opacity:1;filter:none;transform:none;transition:none}}
 #channels{overflow-x:clip}
+/* fly in from the edges, one time per logo (replaces the earlier scatter) */
+.chan-row .chan:nth-child(1){--sx:-70vw;--sy:-20px;--sr:-8deg}
+.chan-row .chan:nth-child(2){--sx:0px;--sy:-60vh;--sr:6deg}
+.chan-row .chan:nth-child(3){--sx:70vw;--sy:-20px;--sr:8deg}
+.chan-row .chan:nth-child(4){--sx:-70vw;--sy:40px;--sr:6deg}
+.chan-row .chan:nth-child(5){--sx:0px;--sy:60vh;--sr:-6deg}
+.chan-row .chan:nth-child(6){--sx:70vw;--sy:40px;--sr:-8deg}
+.brands .brand-logo:nth-child(odd){--sx:-60vw;--sy:0px;--sr:-6deg}
+.brands .brand-logo:nth-child(even){--sx:60vw;--sy:0px;--sr:6deg}
+.js .brands .brand-logo.rv{transition:opacity 1s var(--ease) var(--d,0s),transform 1.3s cubic-bezier(.2,.7,.2,1) var(--d,0s)}
+.js .brands .brand-logo.rv:not(.in){opacity:0;transform:translate3d(var(--sx,0px),var(--sy,0px),0) scale(.6) rotate(var(--sr,0deg))}
+.js .brands .brand-logo.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .brands .brand-logo.rv,.js .brands .brand-logo.rv:not(.in){opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
