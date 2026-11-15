@@ -69,7 +69,7 @@
         if (a) a.setAttribute('aria-current', 'true');
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
-    links.forEach(function (a) { var s = $(a.getAttribute('href')); if (s) spy.observe(s); });
+    $$('section[id]').forEach(function (s) { spy.observe(s); });
     var home = $('#home');
     if (home) new IntersectionObserver(function (en) {
       if (en[0].isIntersecting) links.forEach(function (a) { a.removeAttribute('aria-current'); });
