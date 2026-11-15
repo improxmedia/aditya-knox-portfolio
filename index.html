@@ -518,6 +518,22 @@ html{scroll-behavior:auto}
 .chan.total b,.chan.total span{color:#fff}
 .chan.total .tot-n{font:800 clamp(30px,4vw,40px)/1 var(--fd);letter-spacing:-.03em;flex:none;min-width:120px}
 .chan.total span{opacity:.9}
+
+/* final entrance: short travel inside the section, so the observer always sees the card */
+.js .chan-row .chan.rv{transition:opacity .9s var(--ease) var(--d,0s),transform 1s var(--ease) var(--d,0s);filter:none}
+.js .chan-row .chan.rv:not(.in){opacity:0;filter:none;transform:translate3d(var(--sx,0px),var(--sy,0px),0) scale(.94)}
+.js .chan-row .chan.rv.in{opacity:1;transform:none}
+.chan-row .chan:nth-child(1){--sx:-28px;--sy:10px}
+.chan-row .chan:nth-child(2){--sx:0px;--sy:24px}
+.chan-row .chan:nth-child(3){--sx:28px;--sy:10px}
+.chan-row .chan:nth-child(4){--sx:-28px;--sy:-10px}
+.chan-row .chan:nth-child(5){--sx:0px;--sy:-24px}
+.chan-row .chan:nth-child(6){--sx:28px;--sy:-10px}
+.brands .brand-logo:nth-child(odd){--sx:-18px;--sy:0px}
+.brands .brand-logo:nth-child(even){--sx:18px;--sy:0px}
+.js .brands .brand-logo.rv{transition:opacity .8s var(--ease) var(--d,0s),transform .9s var(--ease) var(--d,0s)}
+.js .brands .brand-logo.rv:not(.in){opacity:0;transform:translate3d(var(--sx,0px),var(--sy,0px),0) scale(.94)}
+.js .brands .brand-logo.rv.in{opacity:1;transform:none}
 </style>
 </head>
 <body>
@@ -1098,6 +1114,6 @@ html{scroll-behavior:auto}
 <dialog id="lb" aria-label="Enlarged screenshot"><figure><img id="lb-img" alt=""><figcaption id="lb-cap"></figcaption></figure><button class="x" type="button" id="lb-x" aria-label="Close enlarged image">×</button></dialog>
 <div class="toast" id="toast" role="status"></div>
 
-<script src="assets/js/site.js?v=20261115b" defer></script>
+<script src="assets/js/site.js?v=20261116a" defer></script>
 </body>
 </html>

@@ -29,6 +29,20 @@
     if (a && a.getAttribute('href').length > 1) document.documentElement.classList.add('nocv');
   });
 
+  /* channel cards and client logos: reveal by position too, so they never stay hidden */
+  var fly = Array.prototype.slice.call(document.querySelectorAll('.chan-row .rv, .brands .rv, .ctr-site.rv'));
+  function revealFly() {
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    fly.forEach(function (el) {
+      if (el.classList.contains('in')) return;
+      var r = el.getBoundingClientRect();
+      if (r.top < vh * 0.92 && r.bottom > 0) el.classList.add('in');
+    });
+  }
+  window.addEventListener('scroll', revealFly, { passive: true });
+  window.addEventListener('resize', revealFly, { passive: true });
+  revealFly();
+
   /* theme toggle (light default for first-time trust; dark follows the system or the visitor's choice) */
   var tbtn = $('#theme'), root = document.documentElement;
   function paintTheme() {
