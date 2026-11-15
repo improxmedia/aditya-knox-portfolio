@@ -534,6 +534,23 @@ html{scroll-behavior:auto}
 .js .brands .brand-logo.rv{transition:opacity .8s var(--ease) var(--d,0s),transform .9s var(--ease) var(--d,0s)}
 .js .brands .brand-logo.rv:not(.in){opacity:0;transform:translate3d(var(--sx,0px),var(--sy,0px),0) scale(.94)}
 .js .brands .brand-logo.rv.in{opacity:1;transform:none}
+
+/* rise-and-settle: cards rise into place in a column-by-column ripple, once */
+.js .chan-row .chan.rv{transition:opacity .8s var(--ease) var(--d,0s),transform .9s var(--ease) var(--d,0s)}
+.js .chan-row .chan.rv:not(.in){opacity:0;transform:translate3d(0,34px,0) scale(.97)}
+.js .chan-row .chan.rv.in{opacity:1;transform:none}
+.chan-row .chan:nth-child(3n+1){--d:0s}
+.chan-row .chan:nth-child(3n+2){--d:.1s}
+.chan-row .chan:nth-child(3n){--d:.2s}
+.js .brands .brand-logo.rv{transition:opacity .7s var(--ease) var(--d,0s),transform .8s var(--ease) var(--d,0s)}
+.js .brands .brand-logo.rv:not(.in){opacity:0;transform:translate3d(0,22px,0) scale(.96)}
+.js .brands .brand-logo.rv.in{opacity:1;transform:none}
+.brands .brand-logo:nth-child(6n+1){--d:0s}
+.brands .brand-logo:nth-child(6n+2){--d:.07s}
+.brands .brand-logo:nth-child(6n+3){--d:.14s}
+.brands .brand-logo:nth-child(6n+4){--d:.21s}
+.brands .brand-logo:nth-child(6n+5){--d:.28s}
+.brands .brand-logo:nth-child(6n){--d:.35s}
 </style>
 </head>
 <body>

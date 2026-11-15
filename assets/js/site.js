@@ -36,7 +36,7 @@
     fly.forEach(function (el) {
       if (el.classList.contains('in')) return;
       var r = el.getBoundingClientRect();
-      if (r.top < vh * 0.92 && r.bottom > 0) el.classList.add('in');
+      if (r.top < vh * 0.92) el.classList.add('in');  /* above or on screen counts as seen */
     });
   }
   window.addEventListener('scroll', revealFly, { passive: true });
