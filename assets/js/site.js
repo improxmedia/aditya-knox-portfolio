@@ -29,6 +29,23 @@
     if (a && a.getAttribute('href').length > 1) document.documentElement.classList.add('nocv');
   });
 
+  /* theme toggle (light default for first-time trust; dark follows the system or the visitor's choice) */
+  var tbtn = $('#theme'), root = document.documentElement;
+  function paintTheme() {
+    var dark = root.getAttribute('data-theme') === 'dark';
+    if (tbtn) {
+      tbtn.setAttribute('aria-pressed', String(dark));
+      tbtn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+    }
+  }
+  paintTheme();
+  if (tbtn) tbtn.addEventListener('click', function () {
+    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    paintTheme();
+  });
+
   /* mobile menu */
   var burger = $('#burger'), menu = $('#menu');
   function setMenu(open) {
