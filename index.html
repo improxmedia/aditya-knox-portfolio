@@ -513,6 +513,11 @@ html{scroll-behavior:auto}
 .js .brands .brand-logo.rv:not(.in){opacity:0;transform:translate3d(var(--sx,0px),var(--sy,0px),0) scale(.6) rotate(var(--sr,0deg))}
 .js .brands .brand-logo.rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.js .brands .brand-logo.rv,.js .brands .brand-logo.rv:not(.in){opacity:1;transform:none;transition:none}}
+
+.chan.total{background:linear-gradient(135deg,var(--a1),var(--a2,#1F5BCB));color:#fff;border-color:transparent}
+.chan.total b,.chan.total span{color:#fff}
+.chan.total .tot-n{font:800 clamp(30px,4vw,40px)/1 var(--fd);letter-spacing:-.03em;flex:none;min-width:120px}
+.chan.total span{opacity:.9}
 </style>
 </head>
 <body>
@@ -656,6 +661,10 @@ html{scroll-behavior:auto}
       <img src="assets/channels/glasbo.webp" alt="Glasbo channel avatar" width="72" height="72" loading="lazy">
       <div><b>Glasbo</b><span><strong>7.35M views</strong> · 56.4K subscribers · 253 videos</span></div>
     </a>
+    <div class="chan total rv" style="--d:.36s">
+      <span class="tot-n">684.5M</span>
+      <div><b>Combined YouTube views</b><span>Six channels · live from YouTube · checked 15 Nov 2026</span></div>
+    </div>
     </div>
   </div>
   <figure class="ctr-site rv">
